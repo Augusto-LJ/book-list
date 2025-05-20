@@ -1,30 +1,81 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+  let books = [
+        {
+          id: 1,
+          title: "History of Europe",
+          cover:
+            "https://printpress.cmsmasters.net/default/wp-content/uploads/sites/11/2019/05/printpress-product-6-540x861.jpg",
+          isRead: true,
+          isbn: "0-395-07157-8",
+          author: "Daniel Trejo",
+        },
+        {
+          id: 2,
+          title: "Penguin Classics",
+          cover:
+            "https://printpress.cmsmasters.net/default/wp-content/uploads/sites/11/2019/05/printpress-product-2-540x861.jpg",
+          isRead: false,
+          isbn: "0-395-07157-8",
+          author: "Daniel Trejo, Jon Snow",
+        },
+        {
+          id: 3,
+          title: "Becoming",
+          cover:
+            "https://printpress.cmsmasters.net/default/wp-content/uploads/sites/11/2019/05/printpress-product-7-540x861.jpg",
+          isRead: false,
+          isbn: "0-395-07157-8",
+          author: "Daniel Trejo",
+        },
+        {
+          id: 4,
+          title: "Sonnets",
+          cover:
+            "https://printpress.cmsmasters.net/default/wp-content/uploads/sites/11/2019/05/printpress-product-5-540x861.jpg",
+          isRead: false,
+          isbn: "0-395-07157-8",
+          author: "Daniel Trejo",
+        },
+      ]
 </script>
 
 <template>
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+
+    <div class="container">
+    <h1>📖 My books</h1>
+    <div class="header-btns">
+      <button
+        class="btn">
+        Add book +
+      </button>
+    </div>
+ 
+    <div class="books-container">
+      <div class="books-list">
+        <div class="book">
+          <div class="book-cover">
+            <img src="https://printpress.cmsmasters.net/default/wp-content/uploads/sites/11/2019/05/printpress-product-6-540x861.jpg" />
+  
+            <button>
+              <i class="fa-solid fa-eye"></i>
+              <span>Did not read yet</span
+              >
+            </button>
+          </div>
+          <div class="book-details">
+            <p class="book-author">Daniel Trejo</p>
+            <h3 class="book-title">History of Europe</h3>
+            <p><i class="fa-solid fa-hashtag icon"></i> 0-395-07157-8</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+
+  </div>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>
