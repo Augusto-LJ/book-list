@@ -1,40 +1,42 @@
 <script setup>
+  import Books from './components/Books.vue';
+  
   let books = [
         {
           id: 1,
-          title: "History of Europe",
+          title: "A psicologia financeira",
           cover:
-            "https://printpress.cmsmasters.net/default/wp-content/uploads/sites/11/2019/05/printpress-product-6-540x861.jpg",
+            "https://m.media-amazon.com/images/I/81ehvI03NYS._SY466_.jpg",
           isRead: true,
-          isbn: "0-395-07157-8",
-          author: "Daniel Trejo",
+          isbn: "9786555111101",
+          author: "Morgan Housel",
         },
         {
           id: 2,
-          title: "Penguin Classics",
+          title: "O homem mais rico da Babilônia",
           cover:
-            "https://printpress.cmsmasters.net/default/wp-content/uploads/sites/11/2019/05/printpress-product-2-540x861.jpg",
+            "https://m.media-amazon.com/images/I/81ehX6Quw2L._SY466_.jpg",
           isRead: false,
-          isbn: "0-395-07157-8",
-          author: "Daniel Trejo, Jon Snow",
+          isbn: "9786555111583",
+          author: "George S Clason",
         },
         {
           id: 3,
-          title: "Becoming",
+          title: "Pai Rico, pai Pobre",
           cover:
-            "https://printpress.cmsmasters.net/default/wp-content/uploads/sites/11/2019/05/printpress-product-7-540x861.jpg",
+            "https://m.media-amazon.com/images/I/71V4lNR2gKL._SY425_.jpg",
           isRead: false,
-          isbn: "0-395-07157-8",
-          author: "Daniel Trejo",
+          isbn: "9788535253191",
+          author: " Robert T Kiyosaki",
         },
         {
           id: 4,
-          title: "Sonnets",
+          title: "O investidor de bom senso",
           cover:
-            "https://printpress.cmsmasters.net/default/wp-content/uploads/sites/11/2019/05/printpress-product-5-540x861.jpg",
+            "https://m.media-amazon.com/images/I/71f6pivF9aL._SY466_.jpg",
           isRead: false,
-          isbn: "0-395-07157-8",
-          author: "Daniel Trejo",
+          isbn: "9788543110110",
+          author: "John C. Bogle",
         },
       ]
 </script>
@@ -52,24 +54,7 @@
     </div>
  
     <div class="books-container">
-      <div class="books-list">
-        <div class="book">
-          <div class="book-cover">
-            <img src="https://printpress.cmsmasters.net/default/wp-content/uploads/sites/11/2019/05/printpress-product-6-540x861.jpg" />
-  
-            <button>
-              <i class="fa-solid fa-eye"></i>
-              <span>Did not read yet</span
-              >
-            </button>
-          </div>
-          <div class="book-details">
-            <p class="book-author">Daniel Trejo</p>
-            <h3 class="book-title">History of Europe</h3>
-            <p><i class="fa-solid fa-hashtag icon"></i> 0-395-07157-8</p>
-          </div>
-        </div>
-      </div>
+      <Books :books="books" />
     </div>
   </div>
 
