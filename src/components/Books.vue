@@ -1,5 +1,6 @@
 <script setup>
     const props = defineProps(['books']);
+    const emit = defineEmits(['toggleIsRead']);
 </script>
 
 <template>
